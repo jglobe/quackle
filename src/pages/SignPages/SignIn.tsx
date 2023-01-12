@@ -17,6 +17,7 @@ export function SignIn() {
 
   function login() {
     document.cookie = 'signedin=1';
+    navigate('/');
   }
 
   return(
