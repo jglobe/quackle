@@ -1,0 +1,27 @@
+.button_button {
+  padding: 8px 16px;
+
+  opacity: 1;
+  border-radius: 4px;
+  
+  cursor: pointer;
+}
+
+.button_button:hover {
+  opacity: .8;
+}
+
+.button_button__primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.button_button__secondary {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
+.button_button__tertiary {
+  color: var(--color-white);
+  background-color: var(--color-tertiary);
+}
