@@ -1,0 +1,25 @@
+.page {
+  padding: 32px;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.page_container {
+  padding: 32px;
+
+  height: 100%;
+
+  border-radius: 8px;
+  background-color: var(--color-white);
+}
+
+.page_title {
+  margin-bottom: 24px;
+
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: bold;
+}
