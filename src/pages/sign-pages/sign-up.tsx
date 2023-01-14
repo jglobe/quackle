@@ -1,21 +1,21 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Button } from '../../components/Button';
-import { Input } from '../../components/Input';
+import { Button } from '../../components/button';
+import { Input } from '../../components/input';
 
-import styles from './Sign.module.css';
+import styles from './sign.module.css';
 
-export function SignIn() {
+export function SignUp() {
   const navigate = useNavigate();
 
   useEffect(() => {
     if(document.cookie.split(';').some((item) => item.trim().startsWith('signedin='))) {
        navigate('/');
     };
-  }, []);
+  },[])
 
-  function login() {
+  function login():void {
     document.cookie = 'signedin=1';
     navigate('/');
   }
@@ -28,7 +28,7 @@ export function SignIn() {
           onSubmit={login}
         >
           <h2 className={styles.form_title}>
-            Sign In
+            Sign Up
           </h2>
           <Input
             type='text'
@@ -42,6 +42,18 @@ export function SignIn() {
           >
             Password
           </Input>
+          <Input
+            type='password'
+            required
+          >
+            Confirm Password
+          </Input>
+          <Input
+            type='email'
+            required
+          >
+            Mail
+          </Input>
           <p className={styles.form_error}>
             Error example
           </p>
@@ -49,13 +61,13 @@ export function SignIn() {
             priority='primary'
             type='submit'
           >
-            Sign In
+            Sign Up
           </Button>
           <a 
-            href="/signup"
+            href="/signin"
             className={styles.form_link}
           >
-              Create new accaunt
+              Already have an accaunt
           </a>
         </form>
       </div>

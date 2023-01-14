@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Button } from '../../components/Button';
+import { Button } from '../../components/button';
 
-import styles from './Home.module.css';
+import styles from './home.module.css';
 
 export function Home() {  
   const navigate = useNavigate();
