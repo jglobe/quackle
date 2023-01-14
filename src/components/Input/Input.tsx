@@ -1,15 +1,17 @@
 import styles from './input.module.css';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  children: string;
+  label: string;
 }
 
-export function Input({children, ...attr}: InputProps) {
+export function Input({label, ...attr}: InputProps) {
   return (
-    <input 
-      {...attr}
-      placeholder={children}
-      className={styles.input_input}
-    />
+    <label className={styles.label}>
+      {label}
+      <input 
+        {...attr}
+        className={styles.label__input}
+      />
+    </label>
   )
 }

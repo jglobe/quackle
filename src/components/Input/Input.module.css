@@ -1,19 +1,42 @@
-.input_input {
-  padding: 4px;
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  font-size: 16px;
+  color: var(--color-font-secondary);
+}
+
+.label:hover  {
+  color: var(--color-primary);
+}
+
+.label__input {
+  padding: 4px 12px;
 
   height: 34px;
-  border: solid 2px var(--color-font-secondary);
+  width: 100%;
+  border: solid 2px transparent;
   border-radius: 4px;
 
-  color: var(--color-font-secondary);
-  text-align: center;
+  color: var(--color-font-primary);
+  text-align: start;
   outline: none;
 }
 
-.input_input:hover {
+.label__input::placeholder {
+  color: var(--color-font-secondary);
+}
+
+.label__input:hover {
   border-color: var(--color-primary);
 }
 
-.input_input:focus {
-  border-color: var(--color-font-primary);
+.label__input:focus {
+  border-color: var(--color-black);
+}
+
+.label:focus-within {
+  color: var(--color-font-primary);
 }
