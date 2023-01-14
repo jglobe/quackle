@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { Link } from '../../components/link';
 import { Button } from '../../components/button';
 import { Input } from '../../components/input';
 
@@ -13,64 +14,59 @@ export function SignUp() {
     if(document.cookie.split(';').some((item) => item.trim().startsWith('signedin='))) {
        navigate('/');
     };
-  },[])
+  }, []);
 
-  function login():void {
+  function login() {
     document.cookie = 'signedin=1';
     navigate('/');
   }
 
   return(
     <div className={styles.container}>
-      <div className={styles.container_inner}>
-        <form
-          className={styles.form}
-          onSubmit={login}
+      <form
+        className={styles.form}
+        onSubmit={login}
+      >
+        <h2 className={styles.form__title}>
+          Sign Up
+        </h2>
+        <Input
+          label='Login'
+          placeholder='username'
+          type='text'
+          required
+        />
+        <Input
+          label='Password'
+          placeholder='******'
+          type='password'
+          required
+        />
+        <Input
+          label='Confirm password'
+          placeholder='******'
+          type='password'
+          required
+        />
+        <Input
+          label='E-mail'
+          placeholder='email@example.com'
+          type='email'
+          required
+        />
+        <p className={styles.form__error}>
+          Error example
+        </p>
+        <Button
+          priority='primary'
+          type='submit'
         >
-          <h2 className={styles.form_title}>
-            Sign Up
-          </h2>
-          <Input
-            type='text'
-            required
-          >
-            Login
-          </Input>
-          <Input
-            type='password'
-            required
-          >
-            Password
-          </Input>
-          <Input
-            type='password'
-            required
-          >
-            Confirm Password
-          </Input>
-          <Input
-            type='email'
-            required
-          >
-            Mail
-          </Input>
-          <p className={styles.form_error}>
-            Error example
-          </p>
-          <Button
-            priority='primary'
-            type='submit'
-          >
-            Sign Up
-          </Button>
-          <a 
-            href="/signin"
-            className={styles.form_link}
-          >
-              Already have an accaunt
-          </a>
-        </form>
-      </div>
+          Sign Up
+        </Button>
+        <Link to="/signin">
+          Already have an account
+        </Link>
+      </form>
     </div>
   )
 }

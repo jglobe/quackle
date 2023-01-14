@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Button } from '../../components/button';
+import { PageTitle } from '../../components/page-title';
 
 import styles from './home.module.css';
 
@@ -21,16 +22,16 @@ export function Home() {
 
   return(
     <div className={styles.page}>
-      <div className={styles.page_container}>
-        <h1 className={styles.page_title}>
+      <div className={styles.page__content}>
+        <PageTitle>
           Homepage
-        </h1>
+        </PageTitle>
         <Button
           type='button'
-          priority='tertiary'
+          priority='primary'
           onClick={logout}
         >
-          SignOut
+          Sign Out
         </Button>
       </div>
     </div>
