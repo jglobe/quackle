@@ -12,26 +12,27 @@
 
 :root {
 	--color-primary: #99c1b9;
-	--color-secondary: #8e7dbe;
-	--color-tertiary: #f2d0a9;
+	--color-link: #8e7dbe;
   --color-error: #d88c9a;
 	--color-font-primary: #000000;
 	--color-font-secondary: #909090;
-	--color-background: #ffffff;
-	--color-white: #ffffff;
-}
+	--color-background-primary: rgba(0, 0, 0, 0.8);
+	--color-background-secondary: #f5f5f5;
 
-html, body {
-	height: 100%;
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-grey: #909090;
 }
 
 body {
+	height: 100vh;
+
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.2;
   color: var(--color-font-primary);
 
-  background-color: var(--color-background);
+  background-color: var(--color-background-primary);
 }
 
 #root {
