@@ -4,7 +4,7 @@ import styles from './link.module.css';
 
 interface LinkType {
   to: string;
-  children: string;
+  children: React.ReactNode;
 }
 
 export function Link({to, children}: LinkType) {

@@ -1,7 +1,7 @@
 import styles from './page-title.module.css';
 
 interface PageTitleType {
-  children: string;
+  children: React.ReactNode;
 }
 
 export function PageTitle({children}: PageTitleType) {
