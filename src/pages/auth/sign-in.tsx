@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Link } from '../../components/link';
-import { Button } from '../../components/button';
-import { Input } from '../../components/input';
+import { Link } from '@components/link';
+import { Button } from '@components/button';
+import { Input } from '@components/input';
 
 import styles from './sign.module.css';
 

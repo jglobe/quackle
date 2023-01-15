@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Button } from '../../components/button';
-import { PageTitle } from '../../components/page-title';
+import { Button } from '@components/button';
+import { PageTitle } from '@components/page-title';
 
 import styles from './home.module.css';
 

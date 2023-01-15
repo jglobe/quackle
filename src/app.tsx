@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Home } from './pages/home';
-import { SignIn, SignUp } from './pages/auth';
+import { Home } from '@pages/home';
+import { SignIn, SignUp } from '@pages/auth';
 
 import './app.css';
 
