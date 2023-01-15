@@ -1,4 +1,4 @@
-.label {
+.input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8,11 +8,7 @@
   color: var(--color-font-secondary);
 }
 
-.label:hover  {
-  color: var(--color-primary);
-}
-
-.label__input {
+.input__input {
   padding: 4px 12px;
 
   height: 34px;
@@ -25,18 +21,14 @@
   outline: none;
 }
 
-.label__input::placeholder {
+.input__input::placeholder {
   color: var(--color-font-secondary);
 }
 
-.label__input:hover {
+.input__input:hover {
   border-color: var(--color-primary);
 }
 
-.label__input:focus {
+.input__input:focus {
   border-color: var(--color-black);
-}
-
-.label:focus-within {
-  color: var(--color-font-primary);
 }

@@ -6,12 +6,18 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export function Input({label, ...attr}: InputProps) {
   return (
-    <label className={styles.label}>
-      {label}
+    <div className={styles.input}>
+      <label
+        className={styles.input__label}
+        htmlFor={'input__' + label}
+      >
+        {label}
+      </label>
       <input 
         {...attr}
-        className={styles.label__input}
+        id={'input__' + label}
+        className={styles.input__input}
       />
-    </label>
+    </div>
   )
 }
