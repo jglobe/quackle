@@ -1,0 +1,50 @@
+.container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  padding: 32px;
+
+  width: 400px;
+  border-radius: 8px;
+  background-color: var(--color-background-secondary);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.form__title {
+  margin-bottom: 16px;
+  
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.form__error {
+  height: 24px;
+
+  text-align: start;
+  color: var(--color-error);
+}
+
+.form__error::before {
+  content: '!';
+
+  margin-right: 8px;
+  padding: 0 6px;
+  
+  height: 20px;
+  border-radius: 16px;
+  border: solid 2px var(--color-error);
+  
+  font-size: 13.5px;
+  color: var(--color-error);
+  vertical-align: text-bottom;
+}

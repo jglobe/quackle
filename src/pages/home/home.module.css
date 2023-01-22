@@ -1,0 +1,14 @@
+.page {
+  padding: 32px;
+
+  height: 100%;
+}
+
+.page__content {
+  padding: 32px;
+
+  height: calc(100vh - 64px);
+
+  border-radius: 8px;
+  background-color: var(--color-background-secondary);
+}
